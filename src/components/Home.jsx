@@ -1,9 +1,25 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { animate, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
-import me from "../assets/new.png";
+import me from "../assets/manishabg.png";
 const Home = () => {
+  const clientCount = useRef(null);
+  const projectCount = useRef(null);
+
+  const animationClientCounts = () => {
+    animate(0, 100, {
+      duration: 1,
+      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
+    });
+  };
+
+  const animationProjectCount = () => {
+    animate(0, 500, {
+      duration: 1,
+      onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
+    });
+  };
   const animations = {
     h1: {
       initial: {
@@ -15,7 +31,6 @@ const Home = () => {
         opacity: 1,
       },
     },
-
     button: {
       initial: {
         y: "-100%",
@@ -32,8 +47,7 @@ const Home = () => {
       <section>
         <div>
           <motion.h1 {...animations.h1}>
-            Hi, I Am <br />
-            Manisha Buragohain
+            Hi, I am <br /> Manisha Buragohain
           </motion.h1>
           <Typewriter
             options={{
@@ -53,7 +67,11 @@ const Home = () => {
 
           <article>
             <p>
-              + <span>100</span>
+              +
+              <motion.span
+                whileInView={animationClientCounts}
+                ref={clientCount}
+              ></motion.span>
             </p>
             <span>clients world-wide </span>
           </article>
@@ -61,9 +79,13 @@ const Home = () => {
           <aside>
             <article>
               <p>
-                + <span>500</span>
+                +
+                <motion.span
+                  whileInView={animationProjectCount}
+                  ref={projectCount}
+                ></motion.span>
               </p>
-              <span>Projects made</span>
+              <span>Projects Done</span>
             </article>
 
             <article data-special>
@@ -80,5 +102,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;

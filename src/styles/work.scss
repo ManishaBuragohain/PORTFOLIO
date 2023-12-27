@@ -1,0 +1,74 @@
+#work {
+  width: 100%;
+  height: 100vh;
+  padding: 8rem $p;
+  > h2 {
+    font: 700 2.5rem $text2;
+    width: fit-content;
+    border-bottom: 1px solid $color6_1;
+    margin: auto;
+    padding: 0.5rem;
+  }
+
+  > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    height: 100%;
+    width: 100%;
+    margin-top: 4rem;
+    background-color: $color5;
+
+    > article {
+      width: 70%;
+      height: 25vmax;
+    }
+
+    .workItem {
+      overflow-y: auto;
+      height: 25vmax;
+      width: 95%;
+      margin: auto;
+      background-color: $color4;
+      padding: 2rem;
+      box-shadow: 0 0 20px 5px $color1;
+      display: flex;
+
+      > img {
+        width: 40%;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+
+      > aside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 60%;
+
+        > h3 {
+          font-size: 20px;
+        }
+
+        > p {
+          letter-spacing: 2px;
+          line-height: 180%;
+          margin: 2rem;
+          font-size: 11px;
+        }
+        > a {
+          background-color: $color3;
+          padding: 0.7rem 2rem;
+          margin: 2rem;
+          color: $color4;
+          transition: all 0.5s;
+          &:hover {
+            background-color: $color3_1;
+          }
+        }
+      }
+    }
+  }
+}
