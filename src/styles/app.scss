@@ -5,8 +5,8 @@
 @import "home";
 @import "animations";
 @import "timeline";
-
 @import "work";
+@import "contact";
 
 * {
   margin: 0%;
@@ -22,7 +22,7 @@ a {
 
 body {
   overflow-x: hidden;
-  background-color: $color1;
+  background-color: $color7;
 }
 
 .disableBtn {

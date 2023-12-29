@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 import React from "react";
 
 const Header = () => {
@@ -7,7 +8,9 @@ const Header = () => {
     </nav>
   );
 };
-
+const hello = () => {
+  window.open("https://github.com/ManishaBuragohain", "_blank");
+};
 const NavContent = () => {
   return (
     <>
@@ -15,13 +18,19 @@ const NavContent = () => {
       <div>
         <a href="#home">Home</a>
         <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#testimonial">Testimonial</a>
-        <a href="#services">Services</a>
+        <a href="#timeline">Experience</a>
+        {/* <a href="#testimonial">Testimonial</a>
+        <a href="#services">Services</a> */}
+
         <a href="#contact">Contact</a>
       </div>
+      <a href="#resume">Resume</a>
       <a href="mailto:buragohainmanisha115@gmail.com">
         <button>Email</button>
+      </a>
+
+      <a onClick={hello} style={{ color: "white", cursor: "pointer" }}>
+        Github
       </a>
     </>
   );
