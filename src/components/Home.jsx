@@ -47,15 +47,9 @@ const Home = () => {
       <section>
         <div>
           <motion.h1 {...animations.h1}>
-            Hi, I am <br /> Manisha Buragohain
+            FRONTEND <br /> DEVELOPER
           </motion.h1>
-          {/* <p>
-            A passionate Front-end developer who loves making cool stuff for the
-            web. While my expertise lies in Front-end development, I also enjoy
-            diving into the Back-End side of things. In fact, my passion for
-            coding began when I saw my RaspberryPi python script work with a
-            microcontroller and also making Excel VBA Macros.
-          </p> */}
+
           <Typewriter
             options={{
               strings: ["A Developer", "A Learner", "A Explorer "],
