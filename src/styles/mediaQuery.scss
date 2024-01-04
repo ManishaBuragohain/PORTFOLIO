@@ -391,3 +391,36 @@
       }
     }
   }
+
+
+
+  @media screen and (max-width: 600px) {
+    #timeline {
+      overflow-x: auto; /* Add horizontal scrollbar if needed */
+      overflow-y: hidden; /* Hide vertical scrollbar initially */
+      height: 174vh;
+  
+      > section {
+        overflow-y: auto; /* Add vertical scrollbar to the section */
+        max-height: 100vh; /* Adjust the maximum height as needed */
+      }
+  
+      .timelineBox::after {
+        left: 10px; /* Adjust the left position as needed */
+      }
+  
+      .timelineItem {
+        width: 100%;
+        padding-left: 2rem; /* Adjust padding as needed */
+        padding-right: 2rem; /* Adjust padding as needed */
+      }
+  
+      .rightTimeline,
+      .leftTimeline {
+        &::after {
+          left: 1px; /* Adjust the left position as needed */
+        }
+      }
+    }
+  }
+  

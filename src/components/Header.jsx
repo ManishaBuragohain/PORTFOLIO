@@ -24,7 +24,7 @@ const NavContent = () => {
 
         <a href="#contact">Contact</a>
       </div>
-      <a href="#resume">Resume</a>
+      {/* <a href="#resume">Resume</a> */}
       <a href="mailto:buragohainmanisha115@gmail.com">
         <button>Email</button>
       </a>
