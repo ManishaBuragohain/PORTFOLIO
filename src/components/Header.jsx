@@ -28,10 +28,6 @@ const NavContent = () => {
       <a href="mailto:buragohainmanisha115@gmail.com">
         <button>Email</button>
       </a>
-
-      <a onClick={hello} style={{ color: "white", cursor: "pointer" }}>
-        Github
-      </a>
     </>
   );
 };
